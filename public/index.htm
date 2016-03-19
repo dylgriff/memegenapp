@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Meme Generator</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/fav.png" type="image/png" />
+</head>
+
+<body>
+    <div class="memeContainer">
+        <div class="widthControl">
+            <div class="col-xs-12 memeContent">
+
+                <h2>The Dank Meme-erator</h2>
+                <p>Select a picture, add a caption, and enjoy your personalized meme!</p>
+                <div class="row">
+                    <div ng-app="">
+
+                        <div class="col-sxs-12 col-md-4 input-text">
+                            <form action="http://127.0.0.1:8081/process_get" method="GET" class="xs-col-12">
+
+                                <input type="text" name="top" placeholder="Top Caption:" ng-model="topcap" maxlength="60">
+                                <br>
+                                <input type="text" name="bottom" placeholder="Bottom Caption:" ng-model="botcap" maxlength="60">
+                                <input type="submit" value="Download" class="btn numba3">
+                            </form>
+
+                        </div>
+                        <div class="col-sm-12 col-md-8 image-display">
+                            <div class="top-text"><p>{{topcap}}</p></div>
+                            <img id="bigImg" src="images/got.jpg" alt="">
+                            <div class="bottom-text"><p>{{botcap}}</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="imageSelect row">
+                    <div class="col-xs-6 col-md-4 col-xl-2 images">
+                        <img src="images/glass.jpg" alt="">
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-xl-2 images">
+                        <img src="images/got.jpg" alt="">
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-xl-2 images">
+                        <img src="images/got2.jpg" alt="">
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-xl-2 images">
+                        <img src="images/world.jpg" alt="">
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-xl-2 images">
+                        <img src="images/hist.jpg" alt="">
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-xl-2 images">
+                        <img src="images/drink.jpg" alt="">
+                    </div>
+                </div>
+                <div class="commentFrom">
+
+                    <br>
+                    <h4>Comments</h4>
+                    <br>
+                    <h6>Leave a comment</h6>
+                    <form action="">
+                        <input type="text" name="name" class="col-xs-12" placeholder="Enter Name" maxlength="20">
+                        <textarea name="comment" id="comment" cols="30" rows="10" class="col-xs-12" placeholder="Enter Comment" maxlength="300"></textarea>
+                        <input type="submit" name="submit" class="btn numba3">
+                    </form>
+                    
+                    <ul id="comments">
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        
+        <div id="chat" class="xs-col-12 col-md-4">
+            <div class="lildiv">◄</div>
+            <h4>Chat it Up with other users!</h4>
+            <div class="messageContainer">
+                <ul id="messages">
+
+                </ul>
+            </div>
+            <div id="form" class="row col-xs-12">
+                <form class="chatForm" action="">
+                    <input id="m" autocomplete="off" placeholder="Add Comment" />
+                    <button class="btn numba3">Send</button>
+                </form>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="script.js"></script>
+        <script>
+            var $cont = $('#messages');
+            $cont[0].scrollTop = $cont[0].scrollHeight;
+        </script>
+</body>
+
+
+</html>

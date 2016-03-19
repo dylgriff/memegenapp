@@ -1,0 +1,411 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'archiveregular';
+    src: url("../fonts/archive.eot");
+    src: url("../fonts/archive.eot?#iefix") format("embedded-opentype"), url("../fonts/archive.woff2") format("woff2"), url("../fonts/archive.woff") format("woff"), url("../fonts/archive.ttf") format("truetype"), url("../fonts/archive.svg#archiveregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aileronregular';
+    src: url("../fonts/aileron-regular.eot");
+    src: url("../fonts/aileron-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/aileron-regular.woff2") format("woff2"), url("../fonts/aileron-regular.woff") format("woff"), url("../fonts/aileron-regular.ttf") format("truetype"), url("../fonts/aileron-regular.svg#aileronregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+img {
+    max-height: 100%;
+}
+
+.imageSelect {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+
+/* line 18, ../sass/style.scss */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+/* line 22, ../sass/style.scss */
+
+.navbar .navbar-brand {
+    float: right;
+}
+
+
+/* line 28, ../sass/style.scss */
+
+html,
+body {
+    background-color: #2a2a2a;
+    height: 100%;
+}
+
+
+/* line 33, ../sass/style.scss */
+
+.memeContainer {
+    margin-top: 15px;
+}
+
+.widthControl {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.memeContent {
+    padding-right: 15px;
+}
+
+
+/* line 35, ../sass/style.scss */
+
+.memeContainer h2,
+h4 {
+    font-family: 'archiveregular';
+    font-size: 3em;
+    color: #06abe8;
+}
+
+h5,
+h6 {
+    color: #06abe8;
+}
+
+h4,
+h5,
+h6 {
+    text-align: center;
+}
+
+
+/* line 40, ../sass/style.scss */
+
+.memeContainer .form-control {
+    height: 160px;
+}
+
+
+/* line 43, ../sass/style.scss */
+
+.memeContainer .col-md-8 {
+    font-size: 1em;
+    color: #fff;
+    font-family: 'aileronregular';
+    background-color: #fff;
+}
+
+
+/* line 50, ../sass/style.scss */
+
+.memeContainer h3 {
+    font-size: 1.4em;
+    color: #fff;
+    font-family: 'aileronregular';
+}
+
+
+/* line 55, ../sass/style.scss */
+
+.memeContainer .btn {
+    width: 150px;
+    border: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    float: right;
+}
+
+
+/* line 63, ../sass/style.scss */
+
+.memeContainer .numba3 {
+    background-color: #06abe8;
+    margin-bottom: 20px;
+}
+
+
+/* line 67, ../sass/style.scss */
+
+.memeContainer p {
+    font-family: 'aileronregular';
+    color: #fff;
+}
+
+.input {
+    background-color: aliceblue;
+    height: 500px;
+}
+
+.input-text input[type="submit"],
+.input-text input[type="text"] {
+    float: left;
+    clear: both;
+}
+
+.input-text input[type="submit"] {
+    margin-left: 5px;
+}
+
+.opac {
+    background-color: red;
+}
+
+input[type="text"],
+textarea,
+#chat input {
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: none;
+    -webkit-box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.75);
+}
+
+.images img {
+    transition: 200ms;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.images img:hover {
+    transition: 200ms;
+    cursor: pointer;
+    transform: scale(1.2);
+    -webkit-box-shadow: 0px 0px 5px 5px #06abe8;
+    -moz-box-shadow: 0px 0px 5px 5px #06abe8;
+    box-shadow: 0px 0px 5px 5px #06abe8;
+    position: relative;
+    z-index: 1;
+}
+
+.images img,
+.image-display img {
+    display: inline-block;
+    max-width: 100%;
+}
+
+.memeContainer .col-md-8 {
+    background-color: #2a2a2a;
+}
+
+.images,
+.image-display {
+    text-align: center;
+}
+
+#bigImg {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+}
+
+.image-display {
+    text-align: center;
+    background-color: transparent;
+    /*margin-top: 175px;*/
+    position: relative;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.top-text {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    max-width: 450px;
+    /*    margin: 0 auto;*/
+    font-family: 'archiveregular';
+    color: #fff;
+    font-size: 1.8em;
+    padding-left: 50px;
+    padding-right: 50px;
+    left: -5px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.top-text p {
+    text-shadow: 0px 0px 5px rgba(150, 150, 150, 1);
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+
+}
+
+.bottom-text {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    /*    margin: 0 auto;*/
+    font-family: 'archiveregular';
+    color: #fff;
+    font-size: 1.8em;
+    padding-left: 50px;
+    padding-right: 50px;
+    left: -5px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    max-width: 450px;
+}
+
+.bottom-text p {
+    text-shadow: 0px 0px 5px rgba(150, 150, 150, 1);
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+#form {
+    bottom: 50px;
+    position: absolute;
+}
+
+.lildiv {
+    height: 60px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 0;
+    font-size: 24px;
+    left: -40px;
+    padding: 10px;
+    color: orangered;
+}
+
+#chat {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    bottom: 0;
+    margin-bottom: -40px;
+    float: right;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    width: 400px;
+    -webkit-transition: all .6s;
+    transition: all .6s;
+}
+
+
+/*
+#chat::before {
+    content: "<";
+    position: absolute;
+    left: -59px;
+    top: 0;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 25px;
+}
+*/
+
+#chat input,
+#chat button {
+    bottom: 0;
+}
+
+#chat button {
+    float: none;
+    height: 4em;
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+#chat input {
+    width: 100%;
+    height: 4em;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.messageContainer {
+    position: relative;
+    /*    background-color: white;
+    margin-bottom: 200px;
+    overflow: hidden;
+    overflow-y: scroll;*/
+}
+
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 370px;
+    top: 200px;
+    right: -415px;
+    bottom: 200px;
+    background-color: white;
+    overflow: hidden;
+    overflow-y: scroll;
+    -webkit-transition: all .6s;
+    transition: all .6s;
+}
+
+.flyout {
+    right: 0!important;
+    -webkit-transition: all .6s;
+    transition: all .6s;
+    cursor: crosshair;
+}
+
+.flyoutMessages {
+    right: 15px!important;
+}
+
+#messages li {
+    padding: 5px 10px;
+    background: #e3e3e3;
+    color: black;
+}
+
+#messages li:nth-child(odd) {
+    background: #fffcfc;
+    color: black;
+}
+
+@media (min-width: 960px) {
+    /* line 74, ../sass/style.scss */
+    h2 {
+        font-size: 4em;
+    }
+    #chat::before {
+        display: none;
+    }
+    /* line 77, ../sass/style.scss */
+    p {
+        font-size: 1.4em;
+    }
+    #chat {
+        right: 0;
+    }
+    #messages {
+        right: 15px;
+    }
+    .lildiv {
+        display: none;
+    }
+    .memeContent {
+        padding-right: 420px;
+    }
+}
+
+@media (max-width: 480) {
+    /* line 83, ../sass/style.scss */
+    .numba3 {
+        margin-bottom: 100px;
+    }
+}
